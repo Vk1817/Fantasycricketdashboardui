@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { Trophy, Users, TrendingUp, Crown } from "lucide-react";
 import { useEffect } from "react";
-import { supabase } from '../../supabase'
+import { supabase } from './supabase'
 
 export function Dashboard() {
 
