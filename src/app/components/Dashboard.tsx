@@ -1,9 +1,24 @@
 import { Link } from "react-router";
 import { Trophy, Users, TrendingUp, Crown } from "lucide-react";
-import { useEffect } from 'react'
-import { supabase } from '../supabase'
+import { useEffect } from "react";
+import { supabase } from "../supabase";
 
 export function Dashboard() {
+
+  // 🔥 Supabase test connection
+  useEffect(() => {
+    async function testConnection() {
+      const { data, error } = await supabase
+        .from("teams")
+        .select("*");
+
+      console.log("DATA:", data);
+      console.log("ERROR:", error);
+    }
+
+    testConnection();
+  }, []);
+
   const stats = [
     { label: "Total Teams", value: "24", icon: Users, color: "from-blue-500 to-cyan-500" },
     { label: "Active Players", value: "264", icon: TrendingUp, color: "from-purple-500 to-pink-500" },
