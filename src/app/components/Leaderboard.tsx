@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { Crown, Medal, Award } from "lucide-react";
-
+ 
 export function Leaderboard() {
   const teams = [
     { id: 1, rank: 1, name: "Mumbai Mavericks", matches: 12, points: 8450, avatar: "MM" },
